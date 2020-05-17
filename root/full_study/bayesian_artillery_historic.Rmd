@@ -1,0 +1,48 @@
+---
+title: "bayesian_artillery_historic"
+author: "Alberto Dell'Era"
+date: "5/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, hdi_evolution_plot, eval=FALSE, echo=FALSE, include=FALSE}
+hdis <- hdis %>% mutate(HDIinRope2 = ifelse (HDIinRope == 1, 'Y', 'N')) 
+
+ggplot(hdis) +
+  geom_segment(aes(x=p0xLow, y=n, xend=p0xHigh, yend=n, color=HDIinRope2) ) +
+  geom_point(aes(x=p0xLow , y=n, color=HDIinRope2), shape = "|") +
+  geom_point(aes(x=p0xHigh, y=n, color=HDIinRope2), shape = "|") +
+  geom_point(aes(x=p0xMean, y=n, color=HDIinRope2), shape = 4) +
+  geom_vline(aes(xintercept=p0x.true), linetype = "dashed") +
+  geom_vline(aes(xintercept=rope[[1]]), linetype = "dotted") +
+  geom_vline(aes(xintercept=rope[[2]]), linetype = "dotted") +
+  facet_wrap(~ name) +
+  scale_y_reverse() +
+  xlab("p0x")
+```
+
+
+
+```{r, hdi_evolution_size, eval=FALSE, include=FALSE}
+plot1 <- ggplot(hdis) +
+  geom_line(aes(x=n, y=p0xMean-p0x.true, color=name)) +
+  geom_hline(aes(yintercept=detection.precision.desired/2), linetype = "twodash") +
+  ylim(0, NA) +
+  ylab("p0x distance from true position")
+
+plot2 <- ggplot(hdis) +
+  geom_line(aes(x=n, y=HDIinRope, color=name)) +
+  ylab("HDI inside ROPE")
+
+plot3 <- ggplot(hdis) +
+  geom_line(aes(x=n, y=p0xHigh-p0xLow, color=name)) +
+  ylim(0, NA) +
+  ylab("size of p0x HDI")
+
+grid.arrange(plot1, plot2, plot3, nrow=1)
+```
