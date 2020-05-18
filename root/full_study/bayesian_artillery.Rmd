@@ -97,7 +97,7 @@ rope <- c(p0x.true - drone.autonomy, p0x.true + drone.autonomy)
 *A short summary is available at:  
 https://github.com/alberto-dellera/bayesian_artillery/blob/master/README.md * 
 
-*Github readers: github on-line resolution is very low, and sometimes even truncated(!)
+*Github readers: github on-line resolution is very low, and sometimes even truncated(!)  
 I'd suggest to download this pdf and open it*
   
 A battery is shooting at us, and all we have are some noisy radar readings about the projectile trajectory:
