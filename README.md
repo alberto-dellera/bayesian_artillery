@@ -6,21 +6,19 @@ readings about the projectile trajectory:
 
 ![](root/full_study/static_images/simulate_cartoon-1.png)
 
-we want to find the battery position, also factoring in some prior
-knowledge provided by our Intelligence.
+we want to find the battery position, also factoring in some prior knowledge provided by our Intelligence.
 
 We will perform a standard Bayesian analysis (model building, MCMC by JAGS, chains exploration, etc), but from the practical perspective of the physical (mechanical) domain expert that wants to understand how the algorithm "reasons" about trajectories, projectile speed, etc etc.
 
-We will build the physical model:
+We will build a physical model:
 
 ![](root/full_study/static_images/physical_model_figure-1.png)
 
-for which we will write a simulator in R, and produce a realization with three radar readins:
-
+for which we will write a simulator in R, and produce a realization with three radar readings:
 
 ![](root/full_study/bayesian_artillery_files/figure-html/simulate-1.png)
 
-Then, we will construct a JAGS (BUGS) model:
+Then, we will construct a JAGS Bayesian model:
 
 ``` r
 jagsModel <- "
@@ -52,7 +50,7 @@ And then we will explore *in great detail* how the Bayesian system incrementally
 
 ![](root/full_study/bayesian_artillery_files/figure-html/plot_full-1.png)
 
-And finish off with a souvenir photo of the battery position posterior:
+And finish off with a souvenir photo of the battery position posterior (Kruschke-style):
 
 ![](root/full_study/bayesian_artillery_files/figure-html/jags_posterior-1.png)
 

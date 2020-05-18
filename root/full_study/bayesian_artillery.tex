@@ -767,17 +767,7 @@ We've found the battery!!
 \hypertarget{next-steps}{%
 \section{Next steps}\label{next-steps}}
 
-Some ideas that I wrote down while I was working.
-
-\hypertarget{stan}{%
-\subsection{Stan}\label{stan}}
-
-Obviously, checking STAN would be very easy; I would expect similar
-results, but maybe faster runtimes and less autocorrelation on the
-posterior chains, since I suspect (by intuition only, I haven't checked)
-that the posterior is constrained in the ``narrow valleys'' described in
-(Kruschke \protect\hyperlink{ref-DBDA2E}{2015}, especially page 176). My
-intuition should be verified of course.
+Some ideas (and random thoughts) that I wrote down while I was working.
 
 \hypertarget{air-friction-and-simulation}{%
 \subsection{air friction and
@@ -811,6 +801,16 @@ C++ and thus we could write the simulation in that language, incorporate
 it in the JAGS source (it's open-source) and recompile; or maybe provide
 the function as a shared library and relink.
 
+\hypertarget{stan}{%
+\subsection{Stan}\label{stan}}
+
+Obviously, checking STAN would be very easy; I would expect similar
+results, but maybe faster runtimes and less autocorrelation on the
+posterior chains, since I suspect (by intuition only, I haven't checked)
+that the posterior is constrained in the ``narrow valleys'' described in
+(Kruschke \protect\hyperlink{ref-DBDA2E}{2015}, especially page 176). My
+intuition should be verified of course.
+
 \hypertarget{nimble}{%
 \subsection{Nimble}\label{nimble}}
 
@@ -818,14 +818,14 @@ It would be very interesting to explore the Nimble tool
 (\url{https://r-nimble.org/}), that extends the BUGS language (the
 language of the JAGS models) to allow for easy integration of new
 functions, written in simil-R, and compiles them in C++ before running.
-It has the potential for being a fantastic toolset, worth investing time
-into.
+On paper, it has the potential for being a fantastic toolset, worth
+investing time into.
 
 The simple frictionless model that we have discussed looks like a good
 testcase to compare Nimble with JAGS (and maybe STAN), before turning to
-simulation with air friction were it should show its full potential.
+simulation with air friction where it should show its full potential.
 
-Document version: 2020/05/17
+Document version: 2020/05/18
 
 \hypertarget{references}{%
 \section{References}\label{references}}

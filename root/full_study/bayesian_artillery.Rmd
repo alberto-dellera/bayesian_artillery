@@ -648,11 +648,7 @@ We've found the battery!!
 
 # Next steps
 
-Some ideas that I wrote down while I was working. 
-
-## Stan
-
-Obviously, checking STAN would be very easy; I would expect similar results, but maybe faster runtimes and less autocorrelation on the posterior chains, since I suspect (by intuition only, I haven't checked) that the posterior is constrained in the "narrow valleys" described in [@DBDA2E, especially page 176]. My intuition should be verified of course.
+Some ideas (and random thoughts) that I wrote down while I was working. 
 
 ## air friction and simulation
 
@@ -666,11 +662,15 @@ For a more realistic model, we would need to turn to simulation. The real air fr
 
 How to integrate a simulation in JAGS? I've investigated a bit and discovered that JAGS could be extended not only by providing new probability distributions, but also new functions. JAGS is written in C++ and thus we could write the simulation in that language, incorporate it in the JAGS source (it's open-source) and recompile; or maybe provide the function as a shared library and relink.
 
+## Stan
+
+Obviously, checking STAN would be very easy; I would expect similar results, but maybe faster runtimes and less autocorrelation on the posterior chains, since I suspect (by intuition only, I haven't checked) that the posterior is constrained in the "narrow valleys" described in [@DBDA2E, especially page 176]. My intuition should be verified of course.
+
 ## Nimble
 
-It would be very interesting to explore the Nimble tool (https://r-nimble.org/), that extends the BUGS language (the language of the JAGS models) to allow for easy integration of new functions, written in simil-R, and compiles them in C++ before running. It has the potential for being a fantastic toolset, worth investing time into.
+It would be very interesting to explore the Nimble tool (https://r-nimble.org/), that extends the BUGS language (the language of the JAGS models) to allow for easy integration of new functions, written in simil-R, and compiles them in C++ before running. On paper, it has the potential for being a fantastic toolset, worth investing time into.
 
-The simple frictionless model that we have discussed looks like a good testcase to compare Nimble with JAGS (and maybe STAN), before turning to simulation with air friction were it should show its full potential.
+The simple frictionless model that we have discussed looks like a good testcase to compare Nimble with JAGS (and maybe STAN), before turning to simulation with air friction where it should show its full potential.
 
 <!-- ------------------------- -->
 <!--  static images generators -->

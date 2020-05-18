@@ -700,11 +700,7 @@ runModelCore &lt;- function(readings,
 </div>
 <div id="next-steps" class="section level1">
 <h1>Next steps</h1>
-<p>Some ideas that I wrote down while I was working.</p>
-<div id="stan" class="section level2">
-<h2>Stan</h2>
-<p>Obviously, checking STAN would be very easy; I would expect similar results, but maybe faster runtimes and less autocorrelation on the posterior chains, since I suspect (by intuition only, I haven’t checked) that the posterior is constrained in the “narrow valleys” described in <span class="citation">(Kruschke <a href="#ref-DBDA2E">2015</a>, especially page 176)</span>. My intuition should be verified of course.</p>
-</div>
+<p>Some ideas (and random thoughts) that I wrote down while I was working.</p>
 <div id="air-friction-and-simulation" class="section level2">
 <h2>air friction and simulation</h2>
 <p>The next most natural steps would be to consider air friction.</p>
@@ -712,10 +708,14 @@ runModelCore &lt;- function(readings,
 <p>For a more realistic model, we would need to turn to simulation. The real air friction dependency on <span class="math inline">\(v(t)\)</span> is complex, it varies depending on the speed of sound that in turn depends on air pressure and hence on <span class="math inline">\(y(t)\)</span>, and it does not help that the projectile starts hypersonic and (usually) ends subsonic, thus breaking the sound barrier at MACH1.</p>
 <p>How to integrate a simulation in JAGS? I’ve investigated a bit and discovered that JAGS could be extended not only by providing new probability distributions, but also new functions. JAGS is written in C++ and thus we could write the simulation in that language, incorporate it in the JAGS source (it’s open-source) and recompile; or maybe provide the function as a shared library and relink.</p>
 </div>
+<div id="stan" class="section level2">
+<h2>Stan</h2>
+<p>Obviously, checking STAN would be very easy; I would expect similar results, but maybe faster runtimes and less autocorrelation on the posterior chains, since I suspect (by intuition only, I haven’t checked) that the posterior is constrained in the “narrow valleys” described in <span class="citation">(Kruschke <a href="#ref-DBDA2E">2015</a>, especially page 176)</span>. My intuition should be verified of course.</p>
+</div>
 <div id="nimble" class="section level2">
 <h2>Nimble</h2>
-<p>It would be very interesting to explore the Nimble tool (<a href="https://r-nimble.org/" class="uri">https://r-nimble.org/</a>), that extends the BUGS language (the language of the JAGS models) to allow for easy integration of new functions, written in simil-R, and compiles them in C++ before running. It has the potential for being a fantastic toolset, worth investing time into.</p>
-<p>The simple frictionless model that we have discussed looks like a good testcase to compare Nimble with JAGS (and maybe STAN), before turning to simulation with air friction were it should show its full potential.</p>
+<p>It would be very interesting to explore the Nimble tool (<a href="https://r-nimble.org/" class="uri">https://r-nimble.org/</a>), that extends the BUGS language (the language of the JAGS models) to allow for easy integration of new functions, written in simil-R, and compiles them in C++ before running. On paper, it has the potential for being a fantastic toolset, worth investing time into.</p>
+<p>The simple frictionless model that we have discussed looks like a good testcase to compare Nimble with JAGS (and maybe STAN), before turning to simulation with air friction where it should show its full potential.</p>
 <!-- ------------------------- -->
 <!--  static images generators -->
 <!-- ------------------------- -->
@@ -725,7 +725,7 @@ is_latex_output: FALSE
 
  http://www.sumsar.net/blog/2013/10/diy-kruschke-style-diagrams/
 -->
-<p>Document version: 2020/05/17</p>
+<p>Document version: 2020/05/18</p>
 </div>
 </div>
 <div id="references" class="section level1">
