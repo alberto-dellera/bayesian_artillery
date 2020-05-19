@@ -541,7 +541,7 @@ model {
 &quot; </code></pre>
 <p>The physical model already implicitly specified the Likelihood, that is, the probability of observing the data (the three <span class="math inline">\(\overrightarrow{r}(t_i)\)</span> and their corresponding <span class="math inline">\(t_i\)</span>) given the four parameters. The formula<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> is simple and can be easily reverse-engineered from the JAGS model text; I like to note that it can be mentally constructed by “plugging the four numbers” into the battery, firing the projectile and then following (simulating<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>) the projectile as it travels across the sky, writing down its positions at the three <span class="math inline">\(t_i\)</span> instants, substracting the actual readings, calculating the three values of the Gaussian PDFs, and eventually multiplying.</p>
 <p>Please also note that the JAGS model is essentially a <em>copy-and-paste of the physical model simulator above</em>, plus the priors. That’s the beauty of the Bayesian approach that Laplace has given us: we just need to reason about how to generate (describe) the data given the parameters (which is relatively easy), and then have the computer turn it around from the data to the parameters<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.</p>
-<p>Side note: ince almost all classical Physical models (in Mechanics, Thermodinamics, Electrical Engineering, etc etc) are composed by a deterministic part (like our trajectory) plus a measurement error (usually Gaussian) that produces the data (like our radar readings), from which the Likelihood functions is readily obtained, that means that we can leverage the sophisticated models produced by hundreds of years of scientific/engineering results and rather easily extend them to incorporate any other knowledge about the parameters (the priors). Isn’t this great?</p>
+<p>Side note: since almost all classical Physical models (in Mechanics, Thermodinamics, Electrical Engineering, etc etc) are composed by a deterministic part (like our trajectory) plus a measurement error (usually Gaussian) that produces the data (like our radar readings), from which the Likelihood functions is readily obtained, that means that we can leverage the sophisticated models produced by hundreds of years of scientific/engineering results and rather easily extend them to incorporate any other knowledge about the parameters (the priors). Isn’t this great?</p>
 <div id="choice-of-priors" class="section level2">
 <h2>choice of priors</h2>
 <p>We will choose all mildly informative priors, obviously with the exception of the battery position.</p>
@@ -726,7 +726,7 @@ is_latex_output: FALSE
 
  http://www.sumsar.net/blog/2013/10/diy-kruschke-style-diagrams/
 -->
-<p>Document version: 2020/05/18</p>
+<p>Document version: 2020/05/19</p>
 </div>
 </div>
 <div id="references" class="section level1">

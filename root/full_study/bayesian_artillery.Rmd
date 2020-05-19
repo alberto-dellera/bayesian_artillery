@@ -257,7 +257,7 @@ Please also note that the JAGS model is essentially a *copy-and-paste of the phy
 
 [^inv_prob]: that's the reason why the Bayesian approach is also known as "inverse probability"
 
-Side note: ince almost all classical Physical models (in Mechanics, Thermodinamics, Electrical Engineering, etc etc) are composed by a deterministic part (like our trajectory) plus a measurement error (usually Gaussian) that produces the data (like our radar readings), from which the Likelihood functions is readily obtained, that means that we can leverage the sophisticated models produced by hundreds of years of scientific/engineering results and rather easily extend them to incorporate any other knowledge about the parameters (the priors). Isn't this great?
+Side note: since almost all classical Physical models (in Mechanics, Thermodinamics, Electrical Engineering, etc etc) are composed by a deterministic part (like our trajectory) plus a measurement error (usually Gaussian) that produces the data (like our radar readings), from which the Likelihood functions is readily obtained, that means that we can leverage the sophisticated models produced by hundreds of years of scientific/engineering results and rather easily extend them to incorporate any other knowledge about the parameters (the priors). Isn't this great?
 
 ## choice of priors
 
