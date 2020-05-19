@@ -1,8 +1,7 @@
 *This is a short summary only; the full study is available at:*   
 *https://github.com/alberto-dellera/bayesian_artillery/blob/master/root/full_study/bayesian_artillery.pdf*
 
-A battery is shooting at us, and all we have are some noisy radar
-readings about the projectile trajectory:
+A battery is shooting at us, and all we have are some noisy radar readings about the projectile trajectory:
 
 ![](root/full_study/static_images/simulate_cartoon-1.png)
 
